@@ -51,16 +51,16 @@
                 <div>
                     <img src="/imagens/Promoção.png" alt="propaganda">
                 </div>
-                <section>
-                    <button>Vestuário</button>
-                    <button>Garrafas</button>
-                    <button>Canencas</button>
-                    <button>Posters</button>
-                    <button>Acessórios</button>
+                <section class="seletores">
+                    <button id="vestuário" onclick="botao(0)">Vestuário</button>
+                    <button id="garrafas" onclick="botao(1)">Garrafas</button>
+                    <button id="canecas" onclick="botao(2)">Canencas</button>
+                    <button id="posters" onclick="botao(3)">Posters</button>
+                    <button id="acessórios" onclick="botao(4)">Acessórios</button>
                 </section>
                 <section class="vendas">
                     <div id="vestuários_produtos">
-                        <div class="produto">
+                        <div class="produto" onclick=" mudar_imagem(0)">
                             <div class="vendas_img"><img src="/imagens/Produtos/1.png" alt="">
                             <span class="vendas_descrição"><h3>Camisas tematicas</h3> <span class="real">R&#36;: xx,xx</span></span>
                             </div>
@@ -87,7 +87,7 @@
                         </div>
                     </div>
                     <div id="garrafas_produtos">
-                        <div class="produto">
+                        <div class="produto" onclick="mudar_imagem(1)">
                             <div class="vendas_img"><img src="/imagens/Produtos/2.png" alt="">
                             <span class="vendas_descrição"><h3>Garrafas temáticas</h3> <span class="real">R&#36;: xx,xx</span></span>
                             </div>
@@ -114,7 +114,7 @@
                         </div>
                     </div>
                     <div id="canecas_produtos">
-                        <div class="produto">
+                        <div class="produto" onclick="mudar_imagem(2)">
                             <div class="vendas_img"><img src="/imagens/Produtos/3.png" alt="">
                             <span class="vendas_descrição"><h3>Canecas temáticas</h3> <span class="real">R&#36;: xx,xx</span></span>
                             </div>
@@ -141,7 +141,7 @@
                         </div>
                     </div>
                     <div id="posters_produtos">
-                        <div class="produto">
+                        <div class="produto" onclick="mudar_imagem(3)">
                             <div class="vendas_img"><img src="/imagens/Produtos/4.png" alt="">
                             <span class="vendas_descrição"><h3>Posters temáticos</h3> <span class="real">R&#36;: xx,xx</span></span>
                             </div>
@@ -168,7 +168,7 @@
                         </div>
                     </div>
                     <div id="acessórios_produtos">
-                        <div class="produto"4>
+                        <div class="produto" onclick="mudar_imagem(4)">
                             <div class="vendas_img"><img src="/imagens/Produtos/5.png" alt="">
                             <span class="vendas_descrição"><h3>Acessórios temáticos</h3> <span class="real">R&#36;: xx,xx</span></span>
                             </div>
@@ -195,6 +195,29 @@
                         </div>
                     </div>
                 </section>
+                 <div id="modal" class="modal_style">
+                    <div class="modal_cont">
+                        <div class="modal_img">
+                            <img src="" alt="imagem do produto" id="imagem_padrão">
+                            <img src="/imagens/Produtos/1.png" alt="imagem do produto" id="imagem1">
+                            <img src="/imagens/Produtos/2.png" alt="imagem do produto" id="imagem2">
+                            <img src="/imagens/Produtos/3.png" alt="imagem do produto" id="imagem3">
+                            <img src="/imagens/Produtos/4.png" alt="imagem do produto" id="imagem4">
+                            <img src="/imagens/Produtos/5.png" alt="imagem do produto" id="imagem5">
+                        </div>
+                        <div class="modal_texto">
+                            <div class="modal_header">
+                                <h2 id="título">Camisa temática</h2>
+                                <i id="fechar">X</i>
+                            </div>
+                            <h3 id="quantidade">quantidade: 0</h3>
+                            <h3 class="preço">R&#36;: xx,xx</h3>
+                            <button id="menos" onclick="mudar_valor(-1)">-</button>
+                            <button id="mais" onclick="mudar_valor(1)">+</button>
+                            <button id="comprar">Comprar</button>
+                        </div>
+                    </div>
+                </div>
             </main>
             
             <footer>
