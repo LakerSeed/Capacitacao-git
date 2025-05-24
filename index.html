@@ -34,19 +34,19 @@
             </header>
 
             <main>
-                <div>
-                        <section>
+                <div class="banner">
+                        <section class="texto_banner">
                             <h2>Quem somos nós</h2>
                             <p>Fundada por um grupo de amigos em 20XX, a rito é uma das maiores empresas de produtos geek da Amérida Latina, entregando sempre muito estilo e conforto.</p>
                         </section>
                         <section class="img_banner"><img  src="/imagens/assets/imagem banner.png" alt=""></section>
                 </div>
-                <div>
-                    <button>❮</button>
+                <div class="slider">
+                    <button id="voltar" onclick="slider(-1)">❮</button>
                     <img src="/imagens/slider/slider 1.png" alt="slider" id="slider1">
                     <img src="/imagens/slider/slider 2.png" alt="slider" id="slider2">
                     <img src="/imagens/slider/slider 3.png" alt="slider" id="slider3">
-                    <button>❯</button>
+                    <button id="avançar" onclick="slider(1)">❯</button>
                 </div>
                 <div>
                     <img src="/imagens/Promoção.png" alt="propaganda">
@@ -206,6 +206,7 @@
                 </section>
             </footer>
         </body>
+        <script src="index.js"></script>
         </html>
     </head>
 </html>
